@@ -119,7 +119,7 @@ bool Currency::getBlockReward(size_t medianSize, size_t currentBlockSize, uint64
 }
 
 size_t Currency::maxBlockCumulativeSize(uint64_t height) const {
-  assert(height <= std::numeric_limits<uint64_t>::max() / m_maxBlockSizeGrowthSpeedNumerator);
+  assert(height <= 	numeric_limits<uint64_t>::max() / m_maxBlockSizeGrowthSpeedNumerator);
   size_t maxSize = static_cast<size_t>(m_maxBlockSizeInitial +
     (height * m_maxBlockSizeGrowthSpeedNumerator) / m_maxBlockSizeGrowthSpeedDenominator);
   assert(maxSize >= m_maxBlockSizeInitial);
